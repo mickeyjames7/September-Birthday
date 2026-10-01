@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>September's Birthday — Admin</title>
+
+    <link rel="stylesheet" href="birthday.css">
+
+</head>
+
+
+<body>
+
+    <h1>September's Birthday Messages</h1>
+
+    <p>
+        Private moderation dashboard
+    </p>
+
+
+    <!-- LOGIN -->
+
+    <section class="admin-section" id="loginSection">
+
+        <h2>Admin Login</h2>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+
+                <label for="adminEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="adminEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="adminPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Log In
+            </button>
+
+        </form>
+
+        <p id="loginStatus"></p>
+
+    </section>
+
+
+    <!-- MODERATION AREA -->
+
+    <section
+        class="admin-section"
+        id="moderationSection"
+        style="display: none;"
+    >
+
+        <h2>Pending Messages</h2>
+
+        <div id="pendingMessages">
+
+            <p>
+                Loading messages...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
